@@ -62,10 +62,12 @@ function App() {
                 checked={isChecked}
                 onChange={handleToggle}
               />
-              <div className="toggle__line w-8 h-4 bg-gray-400 rounded-full shadow-inner"></div>
+              <div className={`toggle__line w-8 h-4  rounded-full shadow-inner ${
+                   isChecked ? 'bg-blue-300' : 'bg-gray-400'
+                   }`}></div>
                 <div
-                   className={`toggle__dot absolute w-4 h-4 bg-white rounded-full shadow inset-y-0 ${
-                   isChecked ? 'right-0 bg-blue-500' : 'left-0 bg-gray-400'
+                   className={`toggle__dot absolute w-4 h-4 rounded-full shadow inset-y-0 ${
+                   isChecked ? 'right-0 bg-blue-500' : 'left-0 bg-white'
                    }`}
                 ></div>
               </div>
@@ -79,14 +81,14 @@ function App() {
         isClicked1 ? '-translate-y-2 shadow-lg bg-blue-500' : ''
       }`}
       onClick={handleClick1}>
-      <text className='text-xl font-bold'>Freebie</text>
+      <text className={`text-xl font-bold ${isClicked1 ? 'text-white' : 'text-black'}`}>Freebie</text>
       <p></p>
-      <text className='text-base font-normal'>Ideal for individuals who need quick access to basic features.</text>
+      <text className={`text-base font-normal ${isClicked1 ? 'text-white' : 'text-black'}`}>Ideal for individuals who need quick access to basic features.</text>
       <div className='my-7'>
-        <text className='text-6xl font-semibold'>$0</text>
-        <text className='text-base font-light'>/ Month</text>
+        <text className={`text-6xl font-semibold ${isClicked1 ? 'text-white' : 'text-black'}`}>$0</text>
+        <text className={`text-base font-light ${isClicked1 ? 'text-white' : 'text-black'}`}>/ Month</text>
       </div>
-      <button className='flex justify-center border-2 border-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
+      <button className='flex justify-center border-2 border-blue-500 text-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
       {Data.map((item, index) => (
         <div className='flex'>
           {index < 2 ? (
@@ -107,14 +109,14 @@ function App() {
         isClicked2 ? '-translate-y-2 shadow-lg bg-blue-500' : ''
       }`}
       onClick={handleClick2}>
-      <text className='text-xl font-bold'>Professional</text>
+      <text className={`text-xl font-bold ${isClicked2 ? 'text-white' : 'text-black'}`}>Professional</text>
       <p></p>
-      <text className='text-base font-normal'>Ideal for individuals who who need advanced features and tools for client work.</text>
+      <text className={`text-base font-normal ${isClicked2 ? 'text-white' : 'text-black'}`}>Ideal for individuals who who need advanced features and tools for client work.</text>
       <div className='my-7'>
-        <text className='text-6xl font-semibold'>$25</text>
-        <text className='text-base font-light'>/ Month</text>
+        <text className={`text-6xl font-semibold ${isClicked2 ? 'text-white' : 'text-black'}`}>$25</text>
+        <text className={`text-base font-light ${isClicked2 ? 'text-white' : 'text-black'}`}>/ Month</text>
       </div>
-      <button className='flex justify-center border-2 border-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
+      <button className='flex justify-center border-2 border-blue-500 text-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
       {Data.map((item, index) => (
         <div className='flex'>         
           {index < 6 ? (
@@ -137,14 +139,14 @@ function App() {
       }`}
       onClick={handleClick}
     >
-      <text className='text-xl font-bold'>Enterprise</text>
+      <text className={`text-xl font-bold ${isClicked ? 'text-white' : 'text-black'}`}>Enterprise</text>
       <p></p>
-      <text className='text-base font-normal'>Ideal for businesses who need personalized services and security for large teams. </text>
+      <text className={`text-base font-normal ${isClicked ? 'text-white' : 'text-black'}`}>Ideal for businesses who need personalized services and security for large teams. </text>
       <div className='my-7'>
-        <text className='text-6xl font-semibold'>$100</text>
-        <text className='text-base font-light'>/ Month</text>
+        <text className={`text-6xl font-semibold ${isClicked ? 'text-white' : 'text-black'}`}>$100</text>
+        <text className={`text-base font-light ${isClicked ? 'text-white' : 'text-black'}`}>/ Month</text>
       </div>
-      <button className='flex justify-center border-2 border-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
+      <button className='flex justify-center border-2 border-blue-500 text-blue-500 w-full h-10 pt-1 bg-white rounded-md mb-8'>Get Started Now</button>
       {Data.map((item, index) => (
         <div className='flex' key={index}>
           <img className='h-7 w-7 my-2 mr-5' src={icon} alt="icon"/>
