@@ -42,7 +42,7 @@ function App() {
     setIsChecked(!isChecked);
   };
   return (
-    <div className='mt-16'>
+    <div className='my-16'>
     <div className='flex justify-center' >
       <div >
         <div className='flex-col' >
